@@ -2,11 +2,11 @@ import { useParams } from 'react-router-dom';
 import { BookRunner } from '../lib/runner/runner';
 import { availableModules } from '../book';
 import { AppText } from '../shared/typography/app-text';
-import { P } from '../shared/typography/p';
 import { Ul, Li } from '../shared/component/app-list';
 import { useRef, useState } from 'react';
 import { Module } from '../lib/builder/types';
 import { AppButton } from '../shared/component/app-button';
+import { SceneDescription } from './scene-description';
 
 export function GamePage() {
   const { chapterId } = useParams();
@@ -28,9 +28,7 @@ function Scene({ selectedModule }: { selectedModule: Module<string> }) {
   const [, setTurnCounter] = useState(0);
   return (
     <>
-      <P>
-        <AppText>{bookRunner.current.sceneDescription}</AppText>
-      </P>
+      <SceneDescription description={bookRunner.current.sceneDescription} />
       <Ul>
         {bookRunner.current.choices.map((c) => (
           <Li key={c.id}>

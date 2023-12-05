@@ -4,4 +4,9 @@
   border: 0;
   color: var(--link-color);
   text-align: left;
+  cursor: pointer;
+}
+
+.root:hover {
+  text-decoration: underline;
 }
