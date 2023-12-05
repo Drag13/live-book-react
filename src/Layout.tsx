@@ -1,8 +1,12 @@
 import { Outlet } from 'react-router-dom';
+import { AppNav } from './nav';
 export function Layout() {
   return (
-    <main>
-      <Outlet></Outlet>
-    </main>
+    <>
+      <AppNav />
+      <main>
+        <Outlet></Outlet>
+      </main>
+    </>
   );
 }
