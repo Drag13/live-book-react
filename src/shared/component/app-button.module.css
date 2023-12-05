@@ -1,0 +1,7 @@
+.root {
+  background-color: inherit;
+  box-shadow: none;
+  border: 0;
+  color: var(--link-color);
+  text-align: left;
+}
